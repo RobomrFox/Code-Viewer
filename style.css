@@ -2,9 +2,9 @@
 
 
 :root {
-    --hover-clr: rgb(228,229,241);
+    --hover-clr: rgb(238, 239, 245);
     --bg-clr: #fafafa;
-    --txt-clr: rgb(70, 72, 90);
+    --txt-clr: 	rgb(70, 72, 90);
     --br-clr: rgb(198, 200, 222);
     --active-clr: cyan;
     --fn-small: 1rem;
@@ -13,12 +13,7 @@
 }
 
 
-.dark-mode {
-    --hover-clr: rgb(228, 229, 241);
-    --bg-clr: #1f1f1f;
-    --txt-clr: #ffffff;
-    --br-clr: rgb(198, 200, 222);
-}
+
 
 * {
     margin: 0;
@@ -36,7 +31,7 @@ h1 {
     font-size: var(--fn-large);
 }
 
-nav span {
+#sideBar span {
     font-size: var(--fn-normal);
 }
 
@@ -58,12 +53,12 @@ body {
     justify-content: flex-start;
 }
 
-#sideBar>ul {
+#sideBar > ul {
     list-style: none;
     color: var(--txt-clr);
     position: sticky;
-    top: 0;
-    align-self: start;
+    /* top: 0; */
+    /* align-self: start; */
 }
 
 #sideBar {
@@ -72,7 +67,7 @@ body {
 }
 
 #sideBar > ul > li.active a {
-    color: aqua;
+    color: var(--active-clr);
 
     svg {
         fill: var(--active-clr);
@@ -87,13 +82,12 @@ body {
     font-weight: bold;
 }
 
-#logo button {
+#logo button{
     display: flex;
     justify-content: center;
 }
 
-#sideBar a,
-#logo {
+#sideBar a, #logo {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -107,6 +101,63 @@ section {
 }
 
 #sideBar a:hover{
-    background-color: var(--bg-clr);
+    background-color: var(--hover-clr);
 }
 
+#toggle_btn {
+    all: unset;
+    cursor: pointer;
+}
+
+.content {
+    border: 2px solid var(--br-clr);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+.wrapper{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.code, .viewer {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 50%;
+}
+
+.code > div label, textarea {
+    display: block;
+
+}
+
+.code label {
+    width: fit-content;
+    max-width: 40rem;
+    width: 100%;
+    background-color: var(--hover-clr);
+}
+
+.code textarea {
+    max-width: 40rem;
+    width: 100%;
+    min-height: 12rem;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+}
+
+
+
+#output {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    outline: 0;
+    background-color: #fff;
+    border: 0;
+}
