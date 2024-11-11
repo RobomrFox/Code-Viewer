@@ -6,6 +6,10 @@
     --bg-clr: #fafafa;
     --txt-clr: 	rgb(70, 72, 90);
     --br-clr: rgb(198, 200, 222);
+    --active-clr: cyan;
+    --fn-small: 1rem;
+    --fn-normal: 1.2rem;
+    --fn-large: 2rem;
 }
 
 
@@ -15,7 +19,19 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
-    color: var(--txt-clr);
+}
+
+span {
+    font-size: var(--fn-small);
+    line-height: 1.2rem;
+}
+
+h1 {
+    font-size: var(--fn-large);
+}
+
+nav span {
+    font-size: var(--fn-normal);
 }
 
 body {
@@ -38,6 +54,7 @@ body {
 
 #sideBar > ul {
     list-style: none;
+    color: var(--txt-clr);
     position: sticky;
     top: 0;
     align-self: start;
@@ -49,10 +66,10 @@ body {
 }
 
 #sideBar > ul > li.active a {
-    color: aqua;
+    color: var(--active-clr);
 
     svg {
-        fill: aqua;
+        fill: var(--active-clr);
     }
 }
 
