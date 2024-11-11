@@ -2,13 +2,18 @@
 
 
 :root {
-    --hover-clr: rgb(228,229,241);
+    --hover-clr: rgb(228, 229, 241);
     --bg-clr: #fafafa;
-    --txt-clr: 	rgb(70, 72, 90);
+    --txt-clr: rgb(70, 72, 90);
     --br-clr: rgb(198, 200, 222);
 }
 
-
+.dark-mode {
+    --hover-clr: rgb(228, 229, 241);
+    --bg-clr: #1f1f1f;
+    --txt-clr: #ffffff;
+    --br-clr: rgb(198, 200, 222);
+}
 
 * {
     margin: 0;
@@ -36,7 +41,7 @@ body {
     justify-content: flex-start;
 }
 
-#sideBar > ul {
+#sideBar>ul {
     list-style: none;
     position: sticky;
     top: 0;
@@ -48,7 +53,7 @@ body {
     color: var(--txt-clr);
 }
 
-#sideBar > ul > li.active a {
+#sideBar>ul>li.active a {
     color: aqua;
 
     svg {
@@ -64,12 +69,13 @@ body {
     font-weight: bold;
 }
 
-#logo button{
+#logo button {
     display: flex;
     justify-content: center;
 }
 
-#sideBar a, #logo {
+#sideBar a,
+#logo {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -83,7 +89,6 @@ section {
 
 }
 
-#sideBar a:hover{
+#sideBar a:hover {
     background-color: var(--bg-clr);
 }
-
