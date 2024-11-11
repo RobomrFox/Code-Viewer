@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Viewer</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://kit.fontawesome.com/d9b7485885.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav id="sideBar">
@@ -61,23 +61,24 @@
             <div class="wrapper">
                 <div class="code">
                     <div>
-                        <label for="html">Html</label>
-                        <textarea id="html_area"></textarea>
+                        <label for="html"><i class="fa-brands fa-html5"></i>Html</label>
+                        <textarea id="html_area" onkeyup="update()"></textarea>
                     </div>
 
                     <div>
-                        <label for="css_area">Css</label>
-                        <textarea id="css_area"></textarea>
+                        <label for="css_area"><i class="fa-brands fa-css3-alt"></i>Css</label>
+                        <textarea id="css_area" onkeyup="update()"></textarea>
                     </div>
                     
 
                     <div>
-                        <label for="js_area">JavaScript</label>
-                        <textarea id="js_area"></textarea>
+                        <label for="js_area"><i class="fa-brands fa-js"></i>JavaScript</label>
+                        <textarea id="js_area" onkeyup="update()"></textarea>
                     </div>
                     
                 </div>
                 <div class="viewer">
+                    <label><i class="fa-solid fa-play"></i>Output</label>
                     <iframe id="output"></iframe>
                 </div>
             </div>
@@ -93,6 +94,19 @@
     <footer></footer>
 
 
-    <script src="app.js"></script>
+    <script>
+
+        function update() {
+
+            const htmlCode = document.getElementById("html_area").value;
+            const cssCode = document.getElementById("css_area").value;
+            const jsCode = document.getElementById("js_area").value;
+            const output = document.getElementById("output");
+
+            output.contentDocument.body.innerHTML = htmlCode + "<style>" + cssCode + "</style>";
+
+        }
+        
+    </script>
 </body>
 </html>
