@@ -2,7 +2,7 @@
 
 
 :root {
-    --hover-clr: rgb(228,229,241);
+    --hover-clr: rgb(238, 239, 245);
     --bg-clr: #fafafa;
     --txt-clr: 	rgb(70, 72, 90);
     --br-clr: rgb(198, 200, 222);
@@ -11,6 +11,7 @@
     --fn-normal: 1.2rem;
     --fn-large: 2rem;
 }
+
 
 
 
@@ -97,10 +98,52 @@ body {
 
 section {
     padding: 1rem;
-
 }
 
 #sideBar a:hover{
-    background-color: var(--bg-clr);
+    background-color: var(--hover-clr);
 }
 
+#toggle_btn {
+    all: unset;
+    cursor: pointer;
+}
+
+.content {
+    border: 2px solid var(--br-clr);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+.wrapper{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+}
+
+.code {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.code > div label, textarea {
+    display: block;
+
+}
+
+.code label {
+    width: fit-content;
+    background-color: ;
+}
+
+.code textarea {
+    max-width: 40rem;
+    width: 100%;
+    min-height: 12rem;
+}
+
+.code, .viewer {
+    width: 50%;
+}
