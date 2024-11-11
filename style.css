@@ -2,9 +2,9 @@
 
 
 :root {
-    --hover-clr: rgb(238, 239, 245);
+    --hover-clr: rgb(228,229,241);
     --bg-clr: #fafafa;
-    --txt-clr: 	rgb(70, 72, 90);
+    --txt-clr: rgb(70, 72, 90);
     --br-clr: rgb(198, 200, 222);
     --active-clr: cyan;
     --fn-small: 1rem;
@@ -13,7 +13,12 @@
 }
 
 
-
+.dark-mode {
+    --hover-clr: rgb(228, 229, 241);
+    --bg-clr: #1f1f1f;
+    --txt-clr: #ffffff;
+    --br-clr: rgb(198, 200, 222);
+}
 
 * {
     margin: 0;
@@ -53,7 +58,7 @@ body {
     justify-content: flex-start;
 }
 
-#sideBar > ul {
+#sideBar>ul {
     list-style: none;
     color: var(--txt-clr);
     position: sticky;
@@ -67,7 +72,7 @@ body {
 }
 
 #sideBar > ul > li.active a {
-    color: var(--active-clr);
+    color: aqua;
 
     svg {
         fill: var(--active-clr);
@@ -82,12 +87,13 @@ body {
     font-weight: bold;
 }
 
-#logo button{
+#logo button {
     display: flex;
     justify-content: center;
 }
 
-#sideBar a, #logo {
+#sideBar a,
+#logo {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -101,49 +107,6 @@ section {
 }
 
 #sideBar a:hover{
-    background-color: var(--hover-clr);
+    background-color: var(--bg-clr);
 }
 
-#toggle_btn {
-    all: unset;
-    cursor: pointer;
-}
-
-.content {
-    border: 2px solid var(--br-clr);
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-
-.wrapper{
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-}
-
-.code {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-.code > div label, textarea {
-    display: block;
-
-}
-
-.code label {
-    width: fit-content;
-    background-color: ;
-}
-
-.code textarea {
-    max-width: 40rem;
-    width: 100%;
-    min-height: 12rem;
-}
-
-.code, .viewer {
-    width: 50%;
-}
