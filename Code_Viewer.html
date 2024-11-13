@@ -47,7 +47,16 @@
                     <span>Help</span>
                 </a>
             </li>
+
+            <li>
+                <a href="#" onclick="darkMode()" id="changeMode">
+                    <img src="./assests/1_Icons/dark-mode.svg">
+                    <span id="change">Dark Mode</span>
+                </a>
+            </li>
         </ul>
+
+        
 
     </nav>
 
@@ -105,6 +114,24 @@
             output.contentDocument.body.innerHTML = htmlCode + "<style>" + cssCode + "</style>";
             output.contentWindow.eval(jsCode)
 
+        }
+
+        function darkMode() {
+            const colorChange = document.body;
+            colorChange.classList.toggle("dark-mode");
+
+
+            if(colorChange.classList.contains("dark-mode")) {
+                console.log(colorChange.getElementsByTagName("span")[0]);
+
+                document.getElementById("change").innerText = "Light Mode";
+
+                document.getElementById("changeMode").getElementsByTagName("img")[0].src = "./assests/1_Icons/light-mode.svg";
+            } else {
+                document.getElementById("change").innerText = "Dark Mode";
+
+                document.getElementById("changeMode").getElementsByTagName("img")[0].src = "./assests/1_Icons/dark-mode.svg";
+            }
         }
         
     </script>

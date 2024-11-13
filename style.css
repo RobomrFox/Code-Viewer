@@ -12,6 +12,14 @@
     --fn-large: 2rem;
 }
 
+.dark-mode {
+    --hover-clr: rgb(59, 28, 50);
+    --bg-clr: #1A1A1D;
+    --txt-clr: 	rgb(166, 77, 121);
+    --br-clr: rgb(198, 200, 222);
+    --active-clr: cyan;
+}
+
 
 
 
@@ -31,6 +39,8 @@ h1 {
     font-size: var(--fn-large);
 }
 
+
+
 #sideBar span {
     font-size: var(--fn-normal);
 }
@@ -42,6 +52,7 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     box-sizing: border-box;
+    color: var(--txt-clr);
 }
 
 #sideBar {
