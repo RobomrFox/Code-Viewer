@@ -49,6 +49,7 @@
             </li>
 
             <li>
+                <!--Light/Dark Mode function-->
                 <a href="#" onclick="darkMode()" id="changeMode">
                     <img src="./assests/1_Icons/dark-mode.svg">
                     <span id="change">Dark Mode</span>
@@ -67,10 +68,13 @@
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo saepe harum doloremque cumque accusantium obcaecati mollitia necessitatibus eos dolorum dolor, molestias fugit reiciendis ad praesentium eveniet vel. Deserunt, beatae eligendi qui in sunt et veniam unde minima consectetur, ullam voluptatibus, earum eum? Laborum quidem distinctio a vitae, illo porro similique eligendi explicabo voluptates. Saepe, eos laudantium facere laborum odio ipsam assumenda autem. Iste aliquid sapiente, maiores expedita illo distinctio exercitationem sint atque vel impedit possimus. Quas beatae ipsum ad eius, numquam totam cum tempora aspernatur maiores sunt quis fugit qui libero dicta fuga omnis laudantium cumque nisi magnam deserunt assumenda quae ipsam. Ipsam incidunt quaerat inventore animi explicabo cupiditate a reiciendis debitis doloribus, quas et ab officiis consequuntur at soluta eum. Iste veritatis nisi molestiae unde aspernatur necessitatibus inventore earum eius consequatur dignissimos. Dolorum dolores maiores rerum expedita vero quas cum vitae ducimus quos facilis doloribus, sapiente quae voluptatem fugit dolore, at modi recusandae voluptatum pariatur voluptas. Fuga excepturi cumque laboriosam, et blanditiis, quae repellat ipsa dolorum, nisi id molestias necessitatibus labore illo iste corporis. Quaerat aspernatur omnis ut placeat reiciendis exercitationem velit provident, dignissimos tempora doloremque ratione commodi laboriosam mollitia quod itaque non illum? Aperiam exercitationem qui doloremque!
             </span>
 
+            <!--Code Editor Container -->
             <div class="wrapper">
                 <div class="code">
                     <div>
+                        <!--using Fontawesome API for icons-->
                         <label for="html"><i class="fa-brands fa-html5" style="color: deeppink;"></i>Html</label>
+                        <!--onkeyup updates the viewer in real time according to function update-->
                         <textarea id="html_area" onkeyup="update()"></textarea>
                     </div>
 
@@ -87,6 +91,7 @@
                     
                 </div>
                 <div class="viewer">
+                    <!--Using iframe to display the editor result side by side-->
                     <label><i class="fa-solid fa-play"></i>Output</label>
                     <iframe id="output"></iframe>
                 </div>
@@ -103,7 +108,7 @@
 
 
     <script>
-
+        //function to update
         function update() {
 
             const htmlCode = document.getElementById("html_area").value;
@@ -116,18 +121,22 @@
 
         }
 
+
+        // manages mode change including the icon and innerText
         function darkMode() {
             const colorChange = document.body;
+            //toggles between light and dark colors
             colorChange.classList.toggle("dark-mode");
 
-
+            //changing span Text and image icon
             if(colorChange.classList.contains("dark-mode")) {
                 console.log(colorChange.getElementsByTagName("span")[0]);
 
                 document.getElementById("change").innerText = "Light Mode";
 
                 document.getElementById("changeMode").getElementsByTagName("img")[0].src = "./assests/1_Icons/light-mode.svg";
-            } else {
+            } else { 
+                //changing back the icon and innerText for Light Mode
                 document.getElementById("change").innerText = "Dark Mode";
 
                 document.getElementById("changeMode").getElementsByTagName("img")[0].src = "./assests/1_Icons/dark-mode.svg";
