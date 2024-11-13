@@ -126,7 +126,7 @@ section {
     border-radius: 1rem;
 }
 
-
+/* styling code editor*/
 .wrapper{
     width: 100%;
     padding: 1rem;
@@ -141,6 +141,7 @@ section {
     background-color: var(--hover-clr);
 }
 
+/* using flex to distribute space evenly between editor and viewere */
 .code, .viewer {
     display: flex;
     flex-direction: column;
@@ -148,9 +149,9 @@ section {
     width: 50%;
 }
 
+/* this stops weird behaviour when we resize code editor text-area */
 .code > div label, textarea {
     display: inline-block;
-
 }
 
 .viewer label {
